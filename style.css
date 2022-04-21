@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&family=My+Soul&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("girl.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  padding-left: 15%;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(42, 81, 88, 0.7);
+  z-index: -1;
+}
+.hero h1 {
+  color: transparent;
+  font-size: 4rem;
+  width: fit-content;
+  position: relative;
+  animation: text-show 0.1s forwards;
+  color: transparent;
+}
+@keyframes text-show {
+  100% {
+    color: #fff;
+  }
+}
+.hero h1 ::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  color: #fff;
+  background: #fc6d6d;
+  animation: text-anim 1s;
+}
+/* Header Animation Area */
+@keyframes text-anim {
+  100% {
+    width: 102%;
+    color: #fff;
+    background: #fc6d6d;
+  }
+}
+.hero h1:nth-child(1) {
+  animation-delay: 1.2s;
+}
+.hero h1:nth-child(2) {
+  animation-delay: 2.2s;
+}
+.hero h1:nth-child(3) {
+  animation: text-show-last 1 forwards;
+  animation-delay: 3.2s;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: initial;
+}
+/* Color for last h1 */
+@keyframes text-show-last {
+  100% {
+    color: #fc6d6d;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+  }
+}
+/*End Color for last h1 */
+.hero h1:nth-child(1) ::after {
+  animation-delay: 0.3s;
+}
+.hero h1:nth-child(2) ::after {
+  animation-delay: 1.3s;
+}
+.hero h1:nth-child(3) ::after {
+  animation-delay: 2.3s;
+}
+/*End Header Animation Area */
+.hero .btn {
+  display: inline-block;
+  border: 2px solid #fc6d6d;
+  background-color: transparent;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-top: 2rem;
+  transition: hover 0.3s ease background-color;
+  cursor: pointer;
+  box-shadow: 0.5px 0.5px 2px rgb(83, 61, 19);
+  animation: btn-anim 2s ease;
+}
+/* Button Animation */
+@keyframes btn-anim {
+  0%,
+  30%,
+  40% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/*End Button Animation */
+.hero .btn a {
+  color: #fc6d6d;
+  padding: 30px 40px;
+}
+.hero .btn:hover {
+  background: #fc6d6d;
+}
+.hero .btn:hover a {
+  color: #fff;
+}
+.hero .btn:active {
+  background: #fc6d6d;
+}
+/* End Hero Section */
+
+/* Service Section */
+.service {
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+}
+.service .service-top {
+  text-align: center;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 3rem;
+}
+.service .service-top .section-title {
+  color: #000;
+  font-weight: 300;
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+.service .service-top .section-title span {
+  color: #fc6d6d;
+}
+.service .service-top p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+  letter-spacing: 0.05rem;
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  opacity: 0.7;
+}
+.service .service-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.service .service-bottom .service-item {
+  display: flex;
+  flex-basis: 80%;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("lalu.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  margin: 0.8rem 0.6rem;
+  border-radius: 10px;
+  position: relative;
+}
+.service .service-bottom .service-item .icon {
+  height: 40px;
+  width: 40px;
+  margin: 0.5rem;
+}
+.service .service-bottom .service-item .icon i {
+  color: #fc6d6d;
+  font-size: 2.5rem;
+}
+.service .service-bottom .service-item h2 {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+.service .service-bottom .service-item p {
+  color: #fff;
+  font-size: 1.2rem;
+}
+/*End Service Section */
